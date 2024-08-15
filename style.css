@@ -1,0 +1,20 @@
+.jumbotron {
+  padding-top: 6rem;
+  background-color: #a39f9b;
+}
+
+.navbar {
+  background-color: #303030;
+}
+
+#Projects {
+  background-color: #a39f9b;
+}
+
+#penulis {
+  background-color: #303030;
+}
+
+section {
+  padding-top: 5rem;
+}
