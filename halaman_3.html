@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daftar Tugas - View PDF</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: #f8f9fa;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        .container {
+            margin-top: 50px;
+        }
+        .list-group-item {
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        .list-group-item:hover {
+            background-color: #e9ecef;
+        }
+        .pdf-container {
+            height: 600px;
+            border: 1px solid #dee2e6;
+            border-radius: 5px;
+            overflow: hidden;
+        }
+        .pdf-iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 class="text-center mb-4">Daftar Tugas Siswa</h1>
+        <div class="row">
+            <!-- List Nama -->
+            <div class="col-md-4">
+                <div class="card">
+                    <div class="card-header bg-primary text-white">
+                        <h5 class="mb-0">Daftar Nama</h5>
+                    </div>
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item" onclick="viewPDF('pdfs/Ahlam rafiuddin, .pdf')">Ahlam Rafiuddin Tonggi Ambo</li>
+                        <li class="list-group-item" onclick="viewPDF('pdfs/Aidah Safitri.pdf')">Aidah Safitri</a></li>
+                        <li class="list-group-item" onclick="viewPDF('pdfs/DEDI.pdf')">Dedi Musliadi</a></li>
+                        <li class="list-group-item" onclick="viewPDF('pdfs/Fatimah Az-Zahra.pdf')">Fatimah Az-Zahra</a></li>
+                        <li class="list-group-item" onclick="viewPDF('pdfs/Herawati .pdf')">Herawati</a></li>
+                        <li class="list-group-item" onclick="viewPDF('pdfs/Heril.pdf')">Heril</a></li>
+                        <li class="list-group-item" onclick="viewPDF('pdfs/indah widiarti.pdf')">Indah Widiarti</a></li>
+                        <li class="list-group-item" onclick="viewPDF('pdfs/Irki Dwy Andika......pdf')">Irki Dwy Andika</a></li>
+                        <li class="list-group-item" onclick="viewPDF('pdfs/Lailatul Nuzul .pdf')">Lailatul Nuzul</a></li>
+                        <li class="list-group-item" onclick="viewPDF('pdfs/Milda Yanthy .pdf')">Milda Yanthy</a></li>
+                        <li class="list-group-item" onclick="viewPDF('pdfs/NABILA.pdf')">Nirwana Nabila BT. Irwan</a></li>
+                        <li class="list-group-item" onclick="viewPDF('pdfs/nahda mufliha rustan.pdf')">Nahdah Muflihah Rustan</a></li>
+                        <li class="list-group-item" onclick="viewPDF('pdfs/nur fahila tamrin sikki.pdf')">Nur Fahilla Tamrin Sikki</a></li>
+                        <li class="list-group-item" onclick="viewPDF('pdfs/nur syahiratul hidayu.pdf')">Nur syahiratul hidayu</a></li>
+                        <li class="list-group-item" onclick="viewPDF('pdfs/Riska.pdf')">Riskayanti</a></li>
+                        <li class="list-group-item" onclick="viewPDF('pdfs/Rizkiyah Rapi.pdf')">Rizkiyah Rapi</a></li>
+                        <li class="list-group-item" onclick="viewPDF('pdfs/Ryan Ardian Marsya.pdf')">Ryan ardian marsya</a></li>
+                        <li class="list-group-item" onclick="viewPDF('pdfs/Siska Dwi Astar.pdf')">Siska Dwi Astari</a></li>
+                        <li class="list-group-item" onclick="viewPDF('pdfs/TITA.pdf')">Tita</a></li>
+                        <li class="list-group-item" onclick="viewPDF('pdfs/APRIZAL.pdf')">Muh. Aprizal</a></li>
+                        <li class="list-group-item" onclick="viewPDF('pdfs/Ardiii.pdf')">Jumardi</a></li>
+                    </ul>
+                </div>
+            </div>
+            <!-- PDF Viewer -->
+            <div class="col-md-8">
+                <div class="card">
+                    <div class="card-header bg-secondary text-white">
+                        <h5 class="mb-0">Tampilan PDF</h5>
+                    </div>
+                    <div class="pdf-container">
+                        <iframe id="pdfViewer" class="pdf-iframe" src=""></iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS (Optional) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        function viewPDF(filePath) {
+            const viewer = document.getElementById('pdfViewer');
+            viewer.src = filePath;
+        }
+    </script>
+</body>
+</html>
